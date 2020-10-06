@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+body,
+input,
+button {
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  height: 100%;
+  background: #282a36;
+}
+
+main {
+  display: flex;
+}
+
+main > div {
+  width: 100%;
+  margin: 0 1px;
+}
+
+body > main > div.flex.column {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+body > main > div.flex.column > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+body > main > div.flex.column > div > h2 {
+  text-align: center;
+  color: #ff79c6;
+  padding: 5px;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  height: 100%;
+  resize: none;
+  outline: none;
+
+  margin: 1px 0;
+  border-radius: 0 7px 7px 0;
+
+  background: #383a59;
+  color: #50fa7b;
+  font-size: 16px;
+  font-weight: medium;
+
+  padding: 20px;
+}
+
+textarea.divergence {
+  border-radius: 7px 0 0 7px;
+
+  color: #ff5555;
+}
+
+.tools {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  border-radius: 7px;
+  padding: 10px;
+  background: #282a36;
+  text-align: center;
+}
+
+.tools > button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: #50fa7b;
+  color: #fff;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.tools > button:nth-child(2) {
+  background: #ff5555;
+}
+
+.tools > button:hover {
+  transform: scale(1.05);
+}
+
+.tools > div {
+  margin-bottom: 15px;
+}
+
+.tools > div > p {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/**
+ * Scrollbar.
+ */
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+
+body ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+body ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 135, 139, 0.8);
+}

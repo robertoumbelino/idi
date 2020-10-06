@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLE -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ID Divergence Identifier</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="flex column">
+        <div>
+          <h2>ERP</h2>
+          <textarea
+            id="erp-ids"
+            placeholder="Informe os IDs do ERP (com quebra de linha)"
+          ></textarea>
+        </div>
+
+        <div>
+          <h2>FW</h2>
+          <textarea
+            id="fw-ids"
+            placeholder="Informe os IDs do FW (com quebra de linha)"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="flex column">
+        <div>
+          <h2>TEM NO FW E NÃO NO ERP</h2>
+          <textarea class="divergence" id="erp-divergence"></textarea>
+
+          <div id="erp-tools" class="tools">
+            <button onclick="copyERPWithoutQuotes()">
+              <i class="far fa-copy"></i>
+              Copiar sem Aspas
+            </button>
+
+            <button onclick="copyERPWithQuotes()">
+              <i class="far fa-clone"></i>
+              Copiar com Aspas
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <h2>TEM NO ERP E NÃO NO FW</h2>
+          <textarea class="divergence" id="fw-divergence"></textarea>
+
+          <div id="fw-tools" class="tools">
+            <button onclick="copyFWWithoutQuotes()">
+              <i class="far fa-copy"></i>
+              Copiar sem Aspas
+            </button>
+
+            <button onclick="copyFWWithQuotes()">
+              <i class="far fa-clone"></i>
+              Copiar com Aspas
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="index.js"></script>
+</html>
